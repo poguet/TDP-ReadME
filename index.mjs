@@ -45,4 +45,54 @@ async function createFile() {
       message: 'Please choose a license for your project:',
       choices: ['MIT', 'Apache-2.0', 'GPL-3.0', 'BSD-3-Clause'],
     },
-  ])};
+  ]);
+
+  const { fileName, title, description, installation, usage, contributing, tests, license } = answers;
+
+  const licenseSection = renderLicenseSection(license);
+  const licenseBadge = renderLicenseBadge(license);
+  const licenseLink = renderLicenseLink(license);
+  
+
+  const fileContent = `# ${title}
+  ## Description
+  
+  ${description}
+  
+  ## Table of Contents
+  
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Contributing](#contributing)
+  - [Tests](#tests)
+  - [License](#license)
+  
+  ## Installation
+  
+  ${installation}
+  
+  ## Usage
+  
+  ${usage}
+  
+  ## Contributing
+  
+  ${contributing}
+  
+  ## Tests
+  
+  ${tests}
+  
+  ## License 
+  
+${licenseSection}
+${licenseBadge}
+${licenseLink}`;
+
+
+  await fs.writeFile(fileName, fileContent);
+
+  console.log(`File "${fileName}" created successfully.`);
+};
+
+createFile();
