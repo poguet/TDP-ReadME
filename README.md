@@ -1,7 +1,7 @@
 # TDP-ReadME
 
 ## description 
-this application allows a user to generate a read me file by nswering prompt questions.
+this application allows a user to generate a read me file by answering prompt questions.
 
 this challenge was difficult but I really enjoyed working with node, it has been great and this is a useful application for the future projects.
 
