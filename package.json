@@ -1,24 +1,17 @@
 {
-  "name": "tdp-readme",
+  "name": "static-site",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/poguet/TDP-ReadME.git"
+      "test": "jest"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/poguet/TDP-ReadME/issues"
-  },
-  "homepage": "https://github.com/poguet/TDP-ReadME#readme",
+  "type": "module",
   "dependencies": {
-    "fs": "^0.0.1-security",
-    "inquirer": "^8.2.4",
-    "jest": "^29.5.0"
+      "fs": "^0.0.1-security",
+      "inquirer": "^8.2.4",
+      "jest": "^29.4.3"
   }
 }
